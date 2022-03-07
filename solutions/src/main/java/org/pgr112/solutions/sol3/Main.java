@@ -5,7 +5,7 @@ public class Main {
         BookRegister br = new BookRegister();
 
         BookSolution b1 = new BookSolution();
-        BookSolution b2 = new BookSolution("Foundation", "I Asimov",650 );
+        BookSolution b2 = new BookSolution("Foundation", "I Asimov",650,  Genre.CRIME );
 
         br.addBook(b1);
         br.addBook(b2);

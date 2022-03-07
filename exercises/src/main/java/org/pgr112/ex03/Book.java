@@ -4,6 +4,7 @@ public class Book {
     private String title;
     private String author;
     private int numberOfpages = 1;
+    private Genre genre;
 
     public Book(String title, String author, int pages){
         this.title = title;
@@ -13,8 +14,16 @@ public class Book {
         }
     }
 
+    public Book(String title, String author, Integer numberOfpages, Genre genre) {
+        this.title = title;
+        this.author = author;
+        this.numberOfpages = numberOfpages;
+        this.genre = genre;
+    }
+
     public String printBook(){
         return title + " - " + author;
+
     }
 
     public String getTitle() {
@@ -39,5 +48,14 @@ public class Book {
 
     public void setNumberOfpages(int numberOfpages) {
         this.numberOfpages = numberOfpages;
+    }
+
+
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public void setGenre(Genre genre) {
+        this.genre = genre;
     }
 }
