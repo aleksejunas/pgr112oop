@@ -12,7 +12,7 @@ public class Program {
         System.out.println("");
     }
 
-    public void task4() {
+   /* public void task4() {
         Scanner scan = new Scanner(System.in);
 
         ArrayList<String> list = new ArrayList<String>();
@@ -22,29 +22,69 @@ public class Program {
         list.add(scan.nextLine());
         list.add(scan.nextLine());
 
-       /* System.out.println("What you entered: ");
-        System.out.println(list);*/
+       *//* System.out.println("What you entered: ");
+        System.out.println(list);*//*
 
         System.out.println("Your loop output: ");
         for (String i : list) {
             System.out.println(i);
         }
-    }
-        public void task6() {
-            System.out.println("Input numbers (negative numbers will  stop the sequence: )");
-            Scanner integerScan = new Scanner(System.in);
+    }*/
 
-            int input = integerScan.nextInt();
-            int sum = 0;
+    /*public void task6() {
+        System.out.println("Input numbers (negative numbers will  stop the sequence: )");
+        Scanner integerScan = new Scanner(System.in);
 
-            while (input >= 0) {
-                sum += input;
-                input = integerScan.nextInt();
+        int input = integerScan.nextInt();
+        int sum = 0;
+
+        while (input >= 0) {
+            sum += input;
+            input = integerScan.nextInt();
+        }
+
+        System.out.println(sum);
+
+    }*/
+
+    public void task7() {
+        displayMenu();
+
+        Scanner menuInput = new Scanner(System.in);
+        String input = menuInput.nextLine();
+
+        ArrayList<String> stringsSoFar = new ArrayList<String>();
+
+        while (!input.equals("2")) {
+            if (input.equals("0")) {
+                // Add new string
+                System.out.println("New word to add: ");
+                stringsSoFar.add(menuInput.next());
+            } else if (input.equals("1")) {
+                // Display all strings
+                for (String s : stringsSoFar) {
+                    System.out.println(s);
+                }
+            } else {
+                System.out.println("I don't know that");
             }
 
-            System.out.println(sum);
-
+            displayMenu();
+            input = menuInput.next();
         }
 
     }
+
+    private void displayMenu() {
+        ArrayList<String> menu = new ArrayList<String>();
+        menu.add("Add single word");
+        menu.add("Display all words");
+        menu.add("Exit");
+
+        // The for loop gets everything from the array and displays it via menu.get(i)
+        for (int i = 0; i < menu.size(); i++){
+            System.out.println("" + i + " -> " + menu.get(i));
+        }
+    }
+}
 

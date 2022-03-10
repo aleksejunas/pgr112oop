@@ -8,9 +8,9 @@ public class Main {
 
 
         prog.runProgram();
-        prog.task4();
-        prog.task6();
-
+        // prog.task4();
+        // prog.task6();
+        prog.task7();
 
     }
 
