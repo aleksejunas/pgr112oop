@@ -6,6 +6,8 @@ public enum Genre {
     ACTION,
     FANTASY,
     CLASSIC,
-    OTHER
+    OTHER,
+    NARCISISM,
+    PSYCHOPATS
 
 }

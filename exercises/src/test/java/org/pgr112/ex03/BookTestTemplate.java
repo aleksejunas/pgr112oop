@@ -8,7 +8,7 @@ public abstract class BookTestTemplate {
 
     @Test
     public void testConstructor1(){
-        Book b1 = new Book("Dune", "Frank Herbert", 700);
+        Book b1 = new Book("Dune");
         b1.setNumberOfpages(750);
 
         assertEquals(750, b1.getNumberOfpages());

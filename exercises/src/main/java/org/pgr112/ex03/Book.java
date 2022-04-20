@@ -3,17 +3,11 @@ package org.pgr112.ex03;
 public class Book {
     private String title;
     private String author;
-    private int numberOfpages = 1;
+    private int numberOfpages;
     private Genre genre;
 
-    public Book(String title, String author, int pages){
-        this.title = title;
-        this.author = author;
-        if(pages > 0) {
-            this.numberOfpages = pages;
-        }
-    }
 
+    /*THIS IS THE CONSTRUCTOR*/
     public Book(String title, String author, Integer numberOfpages, Genre genre) {
         this.title = title;
         this.author = author;
@@ -22,7 +16,9 @@ public class Book {
     }
 
     public String printBook(){
-        return title + " - " + author;
+        System.out.println("Title: " + getTitle() + " -" + " Author: " + getAuthor() + " - Number of pages: "
+                + getNumberOfpages() + " - Genre: " + getGenre());
+        return title + author;
 
     }
 
