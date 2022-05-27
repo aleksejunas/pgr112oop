@@ -4,6 +4,7 @@ import java.awt.Color;
 
 public class Shape extends AbstractShape {
 
+
     public Shape(){
         super();
     }
